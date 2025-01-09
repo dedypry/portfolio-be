@@ -3,10 +3,6 @@ import User from '#models/user'
 import { PdfGeneratorService } from '#services/pdf_generator_service'
 import axios from 'axios'
 import type { HttpContext } from '@adonisjs/core/http'
-import Experience from '#models/experience'
-import moment from 'moment'
-import Education from '#models/education'
-import db from '@adonisjs/lucid/services/db'
 
 export default class ProfilesController {
   async update({ request, response, auth }: HttpContext) {

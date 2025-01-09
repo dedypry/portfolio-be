@@ -1,4 +1,3 @@
-import InvalidDataException from '#exceptions/invalid_data_exception'
 import Experience from '#models/experience'
 import { createExperienceValidator } from '#validators/experience'
 import type { HttpContext } from '@adonisjs/core/http'

@@ -40,8 +40,4 @@ export class ProfileService {
       },
     }
   }
-
-  static renderHtml() {
-    const html = ''
-  }
 }
