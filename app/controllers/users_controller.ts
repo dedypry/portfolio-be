@@ -16,8 +16,12 @@ export default class UsersController {
     }
 
     const profile = await user.related('profile').query().first()
+    const result = {
+      ...profile?.serialize(),
+      ...user.serialize(),
+    }
 
-    await new LoginSuccessNotification(profile).sendLater(mail.use('smtp'))
+    await new LoginSuccessNotification(result).sendLater(mail.use('smtp'))
 
     return response.json({
       message: 'Login success',
